@@ -13,7 +13,7 @@ html, body {
 /* [ Alignments ] */
 /* place content left */
 .left {
-	position: absolute;
+	/*position: absolute;*/
 	left: 0;
 }
 /* float content left */
@@ -22,14 +22,14 @@ html, body {
 }
 /* center content */
 .center {
-	position: absolute;
+	/*position: absolute;*/
 	left: 0;
 	right: 0;
 	margin: 0 auto;
 }
 /* place content right */
 .right {
-	position: absolute;
+	/*position: absolute;*/
 	right: 0;
 }
 /* float content right */
@@ -37,7 +37,7 @@ html, body {
 	float: right;
 }
 .bullseye {
-	position: absolute;
+	/*position: absolute;*/
 	margin: auto;
 	top: 0;
 	left: 0;
@@ -54,6 +54,20 @@ html, body {
 .clear-both {
 	clear: both;
 }
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+ 
+.clearfix:after {
+  clear: both;
+}
+ 
+.clearfix {
+  zoom: 1; /* ie 6/7 */
+}
+
 /* center text */
 .center-text {
 	text-align: center;
@@ -368,7 +382,7 @@ textarea {
 
 /* Navigation */
 .sidePanel {
-	position: absolute;
+	/*position: absolute;*/
 	width: 20%;
 	height: 100vh;
 	background: black;
@@ -649,7 +663,7 @@ textarea {
 	animation: rattle 1s linear;
 }
 .slideInTop {
-	position: absolute;
+	/*position: absolute;*/
 	-moz-animation: slideInTop 1s ease;
 	-webkit-animation: slideInTop 1s ease;
 	-ms-animation: slideInTop 1s ease;
@@ -657,7 +671,7 @@ textarea {
 	transition: slideInTop 1s ease;
 }
 .slideInBottom {
-	position: absolute;
+	/*position: absolute;*/
 	-moz-animation: slideInBottom 1s ease;
 	-webkit-animation: slideInBottom 1s ease;
 	-ms-animation: slideInBottom 1s ease;
@@ -681,7 +695,7 @@ textarea {
 	transition: slideInRight 1s ease;
 }
 .slideInCenter {
-	position: absolute;
+	/*position: absolute;*/
 	left: 0;
 	right: 0;
 	top: 0;
@@ -695,7 +709,7 @@ textarea {
 	transition: slideInCenter 1s ease;
 }
 .bullseye {
-	position: absolute;
+	/*position: absolute;*/
 	left: 0;
 	right: 0;
 	top: 0;
@@ -709,7 +723,7 @@ textarea {
 	transition: bullseye 2s ease;
 }
 .bounce {
-	position: absolute;
+	/*position: absolute;*/
 	left: 0;
 	right: 0;
 	top: 0;

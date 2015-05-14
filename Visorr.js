@@ -1,3 +1,12 @@
+// The default animate event
+function doDefault(object, animationStr) {
+	object.css("-webkit-animation", animationStr);
+	object.css("-moz-animation", animationStr);
+	object.css("-ms-animation", animationStr);
+	object.css("-o-animation", animationStr);
+	object.css("animation", animationStr);
+}
+
 // If user clicks on object
 function doClick(object, animationStr) {
 	// Set the count variable to 0
@@ -44,14 +53,14 @@ function doHover(object, animationStr) {
 
 (function($) {
 	// $('#image').Animate({
- 	//  		name: "spinIn",
-	// 	duration: "10s", 
-	// 	timingFunction: "linear", 
-	// 	delay: "0s",
-	// 	iterationCount: "infinite",
-	// 	direction: "alternate",
-	// 	eventListener: "click"
- 	//  	});
+ 	// 		name: "spinIn",
+	// 		duration: "10s", 
+	// 		timingFunction: "linear", 
+	// 		delay: "0s",
+	// 		iterationCount: "infinite",
+	// 		direction: "alternate",
+	// 		eventListener: "click"
+ 	//  });
 	$.fn.Animate = function(options) {
 		var animationString;
 		var eventListener;
@@ -93,19 +102,19 @@ function doHover(object, animationStr) {
 				break;
 			default:
 				console.log('Event is a hover');
-				doHover($(this), animationString);
+				doDefault($(this), animationString);
 		}
 	}
 
 	// $('#image').Filter({
- 	//  		name: "brightness",
-	// 	gauge: "2"
- 	//  	});
+ 	// 		name: "brightness",
+	// 		level: "2"
+ 	// });
 	$.fn.Filter = function(options) {
 		var unit = "";
 		var settings = $.extend({
 			name: null,
-			gauge: null
+			level: null
 		}, options);
 
 		// filter is blur
@@ -121,7 +130,7 @@ function doHover(object, animationStr) {
 		if (settings.name == 'contrast' || settings.name == 'grayscale' || settings.name == 'invert' || settings.name == 'opacity' || settings.name == 'saturate' || settings.name == 'sepia') { unit = '%'; } // percent 
 
 		// combine the css filter effect to a string
-		filterString = settings.name + "(" + settings.gauge + unit + ")";
+		filterString = settings.name + "(" + settings.level + unit + ")";
 		console.log(filterString);
 
 		$(this).css("-webkit-filter", filterString);
