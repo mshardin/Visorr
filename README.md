@@ -2,7 +2,7 @@
 Front-end Javascript framework
 
 Visorr is a front-end javascript and css framework allowing you to add cool effects and actions to your html 
-elements without the need for heavy coding and elimination of repititious coding.
+elements without the need for heavy coding and the elimination of repititious coding.
 
 Usage:
 
