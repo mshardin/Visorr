@@ -8,6 +8,7 @@ Usage:
 
   Will apply a bounce animation to the heart icon
 
+  ```javascript
   $('#heart-icon').Animate({
       name: "bounce",
       duration: "2s", 
@@ -17,11 +18,14 @@ Usage:
       direction: "alternate",
       eventListener: ""
     });
+  ```
     
     
   Will apply a grayscale filter to filter-image-1
   
+  ```javascript
   $('#filter-image-1').Filter({
      name: "grayscale",
      level: "100"
     });
+  ```
